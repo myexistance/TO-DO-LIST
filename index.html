@@ -1,7 +1,7 @@
   <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Example</title>
+    <title>TO DO LIST</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
@@ -17,9 +17,9 @@
     </li>
   </ul>
   <div v-if="!items.length" class="empty-list-msg">
-    List is empty. Please add your first task.
+    Get in the habit of following a to do list.
   </div>
-  <input type="text" placeholder="New task..." v-model="currentValue" />
+  <input type="text" placeholder="Add a new task..." v-model="currentValue" />
   <button @click="add" :disabled="!currentValue">
     Add task
   </button>
