@@ -1,0 +1,32 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+
+  </head>
+  <body>
+  <div id="app">
+  <h1>TO DO LIST</h1>
+  <ul class="list" v-if="items.length">
+    <li v-for="(item, index) in items" :key="item">
+      {{item}}
+      <span class="remove-item-button" @click="remove(index)">+</span>
+    </li>
+  </ul>
+  <div v-if="!items.length" class="empty-list-msg">
+    List is empty. Please add your first task.
+  </div>
+  <input type="text" placeholder="New task..." v-model="currentValue" />
+  <button @click="add" :disabled="!currentValue">
+    Add task
+  </button>
+</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="script.js"></script>
+  </body>
+</html>
